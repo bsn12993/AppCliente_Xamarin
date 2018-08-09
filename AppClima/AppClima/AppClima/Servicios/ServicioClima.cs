@@ -11,7 +11,7 @@ namespace AppClima.Servicios
 {
     public static class ServicioClima
     {
-        static string Key = "4c8430757945f58bf2a0cd66e96629cd";
+        static string Key = "API_KEY";
 
         public static async Task<Clima> ConsultarClima(string ciudad)
         {
