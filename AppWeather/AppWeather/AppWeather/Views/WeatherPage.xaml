@@ -6,41 +6,98 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout 
-            BindingContext="{Binding Weather}"
-            BackgroundColor="#545454">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
-                        <Label Text="Clima de una Ciudad" TextColor="White" FontAttributes="Bold"></Label>
-                        <Label Text="Ciudad" TextColor="#a8a8a8" FontSize="Small"></Label>
+            BindingContext="{Binding Weather}">
+                <StackLayout 
+                    Orientation="Horizontal" 
+                    HorizontalOptions="FillAndExpand">
+                    <StackLayout 
+                        Padding="10,10,10,10" 
+                        HorizontalOptions="Start">
+                        <Label 
+                            Text="Clima de una Ciudad" 
+                            TextColor="Black" 
+                            FontAttributes="Bold"/>
+                        <Label 
+                            Text="Ciudad" 
+                            TextColor="#a8a8a8" 
+                            FontSize="Small"/>
                         <Entry 
-                        TextColor="White" 
-                        BackgroundColor="Black"
-                        Text="{Binding City}"/>
+                            TextColor="Black" 
+                            Text="{Binding City}"/>
                     </StackLayout>
-                    <StackLayout Padding="0,0,0,10" VerticalOptions="End">
+                    <StackLayout 
+                        Padding="0,0,0,10" 
+                        VerticalOptions="End">
                         <Button 
-                        Text="Buscar Clima" 
-                        WidthRequest="185" 
-                        BorderWidth="1"
-                        Command="{Binding SearchCityCommand}"></Button>
+                            Text="Buscar Clima" 
+                            WidthRequest="185" 
+                            BorderWidth="1"
+                            Command="{Binding SearchCityCommand}"></Button>
                     </StackLayout>
                 </StackLayout>
-                <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
-                    <ActivityIndicator IsRunning="{Binding IsRunning,Mode=TwoWay}"/>
-                    <Label Text="Ubicación" TextColor="#a8a8a8" FontSize="Small"></Label>
-                    <Label Text="{Binding Name,Mode=TwoWay}" TextColor="White" FontSize="Medium"></Label>
-                    <Label Text="Temperatura" TextColor="#a8a8a8" FontSize="Small"></Label>
-                    <Label Text="{Binding Temp,Mode=TwoWay}" TextColor="White" FontSize="Medium"></Label>
-                    <Label Text="Viento" TextColor="#a8a8a8" FontSize="Small"></Label>
-                    <Label Text="{Binding Wind,Mode=TwoWay}" TextColor="White" FontSize="Medium"></Label>
-                    <Label Text="Humedad" TextColor="#a8a8a8" FontSize="Small"></Label>
-                    <Label Text="{Binding Humidity}" TextColor="White" FontSize="Medium"></Label>
-                    <Label Text="Visibilidad" TextColor="#a8a8a8" FontSize="Small"></Label>
-                    <Label Text="{Binding Visibility,Mode=TwoWay}" TextColor="White" FontSize="Medium"></Label>
-                    <Label Text="Amanecer" TextColor="#a8a8a8" FontSize="Small"></Label>
-                    <Label Text="{Binding Sunrise,Mode=TwoWay}" TextColor="White" FontSize="Medium"></Label>
-                    <Label Text="Ocaso" TextColor="#a8a8a8" FontSize="Small"></Label>
-                    <Label Text="{Binding Sunset,Mode=TwoWay}" TextColor="White" FontSize="Medium"></Label>
+                <ActivityIndicator 
+                        IsRunning="{Binding 
+                        IsRunning,Mode=TwoWay}"
+                        HorizontalOptions="Center"/>
+                <StackLayout 
+                    Padding="10,10,10,10" 
+                    HorizontalOptions="Start">
+                    <Label 
+                        Text="Ubicación" 
+                        TextColor="#a8a8a8" 
+                        FontSize="Small"/>
+                    <Label 
+                        Text="{Binding Name,Mode=TwoWay}" 
+                        TextColor="Black" 
+                        FontSize="Medium"/>
+                    <Label 
+                        Text="Temperatura" 
+                        TextColor="#a8a8a8" 
+                        FontSize="Small"/>
+                    <Label 
+                        Text="{Binding Temp,Mode=TwoWay}" 
+                        TextColor="Black" 
+                        FontSize="Medium"/>
+                    <Label 
+                        Text="Viento" 
+                        TextColor="#a8a8a8" 
+                        FontSize="Small"/>
+                    <Label 
+                        Text="{Binding Wind,Mode=TwoWay}" 
+                        TextColor="Black" 
+                        FontSize="Medium"/>
+                    <Label 
+                        Text="Humedad" 
+                        TextColor="#a8a8a8" 
+                        FontSize="Small"/>
+                    <Label 
+                        Text="{Binding Humidity}" 
+                        TextColor="Black" 
+                        FontSize="Medium"/>
+                    <Label 
+                        Text="Visibilidad" 
+                        TextColor="#a8a8a8" 
+                        FontSize="Small"/>
+                    <Label 
+                        Text="{Binding Visibility,Mode=TwoWay}" 
+                        TextColor="Black" 
+                        FontSize="Medium"/>
+                    <Label 
+                        Text="Amanecer" 
+                        TextColor="#a8a8a8" 
+                        FontSize="Small"/>
+                    <Label 
+                        Text="{Binding Sunrise,Mode=TwoWay}" 
+                        TextColor="Black" 
+                        FontSize="Medium"/>
+                    <Label 
+                        Text="Ocaso" 
+                        TextColor="#a8a8a8" 
+                        FontSize="Small"/>
+                    <Label 
+                        Text="{Binding Sunset,Mode=TwoWay}" 
+                        TextColor="Black" 
+                        FontSize="Medium"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
