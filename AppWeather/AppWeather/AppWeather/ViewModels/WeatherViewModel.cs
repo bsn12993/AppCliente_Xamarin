@@ -144,10 +144,11 @@ namespace AppWeather.ViewModels
         private async void SearchCity()
         {
             this.IsRunning = true;
+            CleanFields();
             if (string.IsNullOrEmpty(this.City))
             {
                 this.IsRunning = false;
-                await App.Current.MainPage.DisplayAlert("Error", "El campo esta vacio", "Ok");
+                await App.Current.MainPage.DisplayAlert("Info", "El campo esta vacio", "Ok");
                 return;
             }
 
@@ -176,6 +177,17 @@ namespace AppWeather.ViewModels
             this.Sunrise = string.Format("{0} {1}", dateBase.AddSeconds((double)weather.sys.sunrise), "UTC");
             this.Sunset = string.Format("{0} {1}", dateBase.AddSeconds((double)weather.sys.sunset), "UTC");
             this.IsRunning = false;
+        }
+
+        public void CleanFields()
+        {
+            this.Name = string.Empty;
+            this.Temp = string.Empty;
+            this.Wind = string.Empty;
+            this.Humidity = string.Empty;
+            this.Visibility = string.Empty;
+            this.Sunrise = string.Empty;
+            this.Sunset = string.Empty;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
